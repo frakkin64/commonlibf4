@@ -7,13 +7,13 @@
 #include "RE/B/BaseExtraList.h"
 #include "RE/E/EXTRA_DATA_TYPE.h"
 #include "RE/M/MemoryManager.h"
-#include "RE/N/NiPoint.h"
 #include "RE/T/TBO_InstanceData.h"
 
 namespace RE
 {
 	class BGSObjectInstanceExtra;
 	class BGSPrimitive;
+	class NiPoint3;
 
 	namespace detail
 	{
@@ -175,6 +175,27 @@ namespace RE
 			using func_t = decltype(&ExtraDataList::GetPrimitive);
 			static REL::Relocation<func_t> func{ ID::ExtraDataList::GetPrimitive };
 			return func(this);
+		}
+
+		void CopyFrom(ExtraDataList* a_extraDataList) noexcept
+		{
+			using func_t = decltype(&ExtraDataList::CopyFrom);
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::CopyFrom };
+			return func(this, a_extraDataList);
+		}
+
+		void SetCount(int16_t a_count) noexcept
+		{
+			using func_t = decltype(&ExtraDataList::SetCount);
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::SetCount };
+			return func(this, a_count);
+		}
+
+		static void Create(ExtraDataList* a_extraDataList) noexcept
+		{
+			using func_t = decltype(&ExtraDataList::Create);
+			static REL::Relocation<func_t> func{ ID::ExtraDataList::Create };
+			return func(a_extraDataList);
 		}
 
 		// members
