@@ -262,6 +262,7 @@
 #include "RE/B/BSEventFlag.h"
 #include "RE/B/BSExternalAudioIO.h"
 #include "RE/B/BSExtraData.h"
+#include "RE/B/BSFaceGenAnimationData.h"
 #include "RE/B/BSFadeNode.h"
 #include "RE/B/BSFile.h"
 #include "RE/B/BSFixedString.h"
